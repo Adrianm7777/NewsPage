@@ -1,0 +1,28 @@
+.login-form {
+  top: 60px;
+  background-color: var(--gray-80);
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  right: 10px;
+  height: 150px;
+  border-radius: 8px;
+  width: 200px;
+}
+.login-form input {
+  border-radius: 5px;
+}
+
+.login-form button {
+  border: 1px solid var(--black);
+  display: flex;
+  border-radius: 15%;
+}
+
+.login-buttons {
+  display: flex;
+  gap: 10px;
+}
