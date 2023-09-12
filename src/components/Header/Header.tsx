@@ -21,17 +21,17 @@ const Header = () => {
   return (
     <div className="Bar-container">
       <div className="hamburger-menu">
-        <div className="line-1"></div>
-        <div className="line-1"></div>
-        <div className="line-1"></div>
-        <div className="bar"></div>
-        <div className="bar"></div>
-        <div className="bar"></div>
-        <div className="bar"></div>
-        <div className="bar"></div>
-        <div className="bar"></div>
-        <div className="bar"></div>
-        <div className="bar"></div>
+        {Array(3)
+          .fill("")
+          .map((_, index) => (
+            <div className="line-1"></div>
+          ))}
+
+        {Array(8)
+          .fill("")
+          .map((_, index) => (
+            <div className="bar"></div>
+          ))}
       </div>
       <div className="navi-bar-start">
         <LinkImg

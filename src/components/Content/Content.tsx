@@ -3,14 +3,12 @@ import "./Content.css";
 import Highlight from "./Highlight/Highlight";
 import Latest from "./Latest/Latest";
 
-const Content = () => {
-  return (
-    <div className="content-container">
-      <Highlight />
-      <Latest />
-      <Chart />
-    </div>
-  );
-};
+const Content = () => (
+  <div className="content-container">
+    <Highlight />
+    <Latest />
+    <Chart />
+  </div>
+);
 
 export default Content;

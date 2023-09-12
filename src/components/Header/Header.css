@@ -5,9 +5,9 @@
   justify-content: space-between;
   width: 100%;
   top: 0;
-  background: white;
+  background: var(--white);
   height: 60px;
-  border-bottom: solid 2px black;
+  border-bottom: solid 2px var(--black);
   z-index: 999;
 }
 .hamburger-menu {

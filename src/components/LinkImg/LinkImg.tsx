@@ -4,12 +4,10 @@ interface LinkImgProps {
   src: string;
   alt?: string;
 }
-const LinkImg = ({ className, href, src, alt = "" }: LinkImgProps) => {
-  return (
-    <a href={href}>
-      <img className={className} alt={alt} src={src} />
-    </a>
-  );
-};
+const LinkImg = ({ className, href, src, alt = "" }: LinkImgProps) => (
+  <a href={href}>
+    <img className={className} alt={alt} src={src} />
+  </a>
+);
 
 export default LinkImg;

@@ -33,7 +33,7 @@ const Latest = () => {
         }}
       >
         {Array(12)
-          .fill(null)
+          .fill("")
           .map((_, index) => (
             <div className="latest-item" key={index}>
               <img src="https://images.emojiterra.com/google/noto-emoji/unicode-15/color/share/1f92b.jpg" />

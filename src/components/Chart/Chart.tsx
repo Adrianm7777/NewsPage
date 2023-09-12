@@ -16,19 +16,17 @@ const Chart = ({
   src,
   trackTitle,
   classType,
-}: ChartProps) => {
-  return (
-    <div className={classType}>
-      <div className="ranking-number">{ranking}</div>
-      <a href={href}>
-        <img src={src} />
-      </a>
-      <div className="chart-item-text">
-        <h3>{albumTitle}</h3>
-        <p>{trackTitle}</p>
-      </div>
+}: ChartProps) => (
+  <div className={classType}>
+    <div className="ranking-number">{ranking}</div>
+    <a href={href}>
+      <img src={src} />
+    </a>
+    <div className="chart-item-text">
+      <h3>{albumTitle}</h3>
+      <p>{trackTitle}</p>
     </div>
-  );
-};
+  </div>
+);
 
 export default Chart;
