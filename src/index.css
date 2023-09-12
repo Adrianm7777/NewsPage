@@ -1,9 +1,9 @@
 :root {
   --black: #000;
   --white: #fff;
-  --whiteSmoke: #f5f5f5;
-  --SpiroDiscoBall: #12bdfd;
-  --Gray80: #ccc;
+  --white-smoke: #f5f5f5;
+  --spiro-disco-ball: #12bdfd;
+  --Gray-80: #ccc;
   --red: rgb(255, 0, 0);
 }
 body {

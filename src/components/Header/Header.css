@@ -41,7 +41,7 @@
   font: bold;
 }
 .navi-bar a:hover {
-  color: var(--SpiroDiscoBall);
+  color: var(--spiro-disco-ball);
 }
 .navi-bar a.explore-arrow:after {
   content: "▼";
@@ -51,7 +51,8 @@
   font-size: 8px;
 }
 .dropdown-block a:hover {
-  background-color: var(--SpiroDiscoBall);
+  background-color: var(--spiro-disco-ball);
+  color: var(--black);
 }
 .explore-dropdown {
   display: flex;

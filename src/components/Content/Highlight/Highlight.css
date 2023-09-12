@@ -22,7 +22,7 @@
   width: 100%;
 }
 .main-news a:hover {
-  color: var(--SpiroDiscoBall);
+  color: var(--spiro-disco-ball);
 }
 
 .trending-news {
@@ -54,7 +54,7 @@
   height: auto;
 }
 .trending-news a:hover {
-  color: var(--SpiroDiscoBall);
+  color: var(--spiro-disco-ball);
 }
 
 .title-trending {

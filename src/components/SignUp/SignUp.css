@@ -1,6 +1,6 @@
 .login-form {
   top: 60px;
-  background-color: var(--Gray80);
+  background-color: var(--Gray-80);
   display: flex;
   position: absolute;
   flex-direction: column;

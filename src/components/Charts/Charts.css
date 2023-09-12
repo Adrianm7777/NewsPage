@@ -1,6 +1,6 @@
 .chart-container {
   display: flex;
-  background-color: var(--whiteSmoke);
+  background-color: var(--white-smoke);
   width: 100%;
   height: 150vh;
   flex-direction: row;
@@ -38,7 +38,7 @@
   width: 120px;
   content: "Buy it";
   opacity: 0;
-  background-color: var(--SpiroDiscoBall);
+  background-color: var(--spiro-disco-ball);
   align-items: center;
   justify-content: center;
   margin-top: -124px;
@@ -114,7 +114,7 @@
   position: absolute;
   content: "Buy it";
   opacity: 0;
-  background-color: var(--SpiroDiscoBall);
+  background-color: var(--spiro-disco-ball);
   align-items: center;
   justify-content: center;
   margin-top: -214px;
@@ -154,7 +154,7 @@
   position: absolute;
   content: "Buy it";
   opacity: 0;
-  background-color: var(--SpiroDiscoBall);
+  background-color: var(--spiro-disco-ball);
   align-items: center;
   justify-content: center;
   margin-top: -214px;
