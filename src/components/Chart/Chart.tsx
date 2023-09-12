@@ -1,4 +1,5 @@
 import React from "react";
+
 interface ChartProps {
   ranking: number;
   href: string;

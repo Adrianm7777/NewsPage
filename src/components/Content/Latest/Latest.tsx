@@ -8,17 +8,16 @@ const Latest = () => {
 
   const latestContentWidth = 3 * windowWidth;
 
-  const handleNextPage = () => {
+  const disabledWidth = 2 * windowWidth;
+
+  const handleNextPage = () =>
     setOffset((prevState) => prevState + windowWidth);
-  };
-  const handlePrevPage = () => {
+  const handlePrevPage = () =>
     setOffset((prevState) => prevState - windowWidth);
-  };
+
   return (
     <div className="latest-container">
-      <h2>
-        <a href="#">LATEST NEWS</a>
-      </h2>
+      <a href="#">LATEST NEWS</a>
       <button
         className="offset-button prev"
         onClick={handlePrevPage}
@@ -33,95 +32,22 @@ const Latest = () => {
           width: latestContentWidth,
         }}
       >
-        <div className="latest-item">
-          <img src="https://images.emojiterra.com/google/noto-emoji/unicode-15/color/share/1f92b.jpg" />
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in
-            finibus urna.
-          </p>
-        </div>
-        <div className="latest-item">
-          <img src="https://images.emojiterra.com/google/noto-emoji/unicode-15/color/share/1f92b.jpg" />
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in
-            finibus urna.
-          </p>
-        </div>
-        <div className="latest-item">
-          <img src="https://images.emojiterra.com/google/noto-emoji/unicode-15/color/share/1f92b.jpg" />
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in
-            finibus urna.
-          </p>
-        </div>
-        <div className="latest-item">
-          <img src="https://images.emojiterra.com/google/noto-emoji/unicode-15/color/share/1f92b.jpg" />
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in
-            finibus urna.
-          </p>
-        </div>
-        <div className="latest-item">
-          <img src="https://images.emojiterra.com/google/noto-emoji/unicode-15/color/share/1f92b.jpg" />
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in
-            finibus urna.
-          </p>
-        </div>
-        <div className="latest-item">
-          <img src="https://images.emojiterra.com/google/noto-emoji/unicode-15/color/share/1f92b.jpg" />
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in
-            finibus urna.
-          </p>
-        </div>
-        <div className="latest-item">
-          <img src="https://images.emojiterra.com/google/noto-emoji/unicode-15/color/share/1f92b.jpg" />
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in
-            finibus urna.
-          </p>
-        </div>
-        <div className="latest-item">
-          <img src="https://images.emojiterra.com/google/noto-emoji/unicode-15/color/share/1f92b.jpg" />
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in
-            finibus urna.
-          </p>
-        </div>
-        <div className="latest-item">
-          <img src="https://images.emojiterra.com/google/noto-emoji/unicode-15/color/share/1f92b.jpg" />
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in
-            finibus urna.
-          </p>
-        </div>
-        <div className="latest-item">
-          <img src="https://images.emojiterra.com/google/noto-emoji/unicode-15/color/share/1f92b.jpg" />
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in
-            finibus urna.
-          </p>
-        </div>
-        <div className="latest-item">
-          <img src="https://images.emojiterra.com/google/noto-emoji/unicode-15/color/share/1f92b.jpg" />
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in
-            finibus urna.
-          </p>
-        </div>
-        <div className="latest-item">
-          <img src="https://images.emojiterra.com/google/noto-emoji/unicode-15/color/share/1f92b.jpg" />
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in
-            finibus urna.
-          </p>
-        </div>
+        {Array(12)
+          .fill(null)
+          .map((_, index) => (
+            <div className="latest-item" key={index}>
+              <img src="https://images.emojiterra.com/google/noto-emoji/unicode-15/color/share/1f92b.jpg" />
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in
+                finibus urna.
+              </p>
+            </div>
+          ))}
       </div>
       <button
         className="offset-button next"
         onClick={handleNextPage}
-        disabled={offset >= 2 * windowWidth}
+        disabled={offset >= disabledWidth}
       >
         Next
       </button>

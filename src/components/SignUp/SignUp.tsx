@@ -7,15 +7,11 @@ const SignUp = () => {
   const toggleLogin = () => setIsLoginVisible((prevState) => !prevState);
 
   useEffect(() => {
-    const closeWindow = () => {
-      setIsLoginVisible(false);
-    };
-    if (isLoginVisible) {
-      document.body.addEventListener("click", closeWindow);
-    }
-    return () => {
-      document.body.removeEventListener("click", closeWindow);
-    };
+    const closeWindow = () => setIsLoginVisible(false);
+
+    if (isLoginVisible) document.body.addEventListener("click", closeWindow);
+
+    return () => document.body.removeEventListener("click", closeWindow);
   }, [isLoginVisible]);
 
   return (

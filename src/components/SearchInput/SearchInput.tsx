@@ -7,15 +7,11 @@ const SearchInput = () => {
   const toggleSearch = () => setIsSearchVisible((prevState) => !prevState);
 
   useEffect(() => {
-    const searchClose = () => {
-      setIsSearchVisible(false);
-    };
-    if (isSearchVisible) {
-      document.body.addEventListener("click", searchClose);
-    }
-    return () => {
-      document.body.removeEventListener("click", searchClose);
-    };
+    const searchClose = () => setIsSearchVisible(false);
+
+    if (isSearchVisible) document.body.addEventListener("click", searchClose);
+
+    return () => document.body.removeEventListener("click", searchClose);
   }, [isSearchVisible]);
 
   return (

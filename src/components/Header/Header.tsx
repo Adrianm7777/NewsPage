@@ -4,7 +4,6 @@ import SearchInput from "../SearchInput/SearchInput";
 import SignUp from "../SignUp/SignUp";
 import LinkImg from "../LinkImg/LinkImg";
 import { HEADER_DATA } from "./Header.const";
-import { click } from "@testing-library/user-event/dist/click";
 
 const Header = () => {
   const [isExploreOpen, setIsExploreOpen] = useState(false);

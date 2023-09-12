@@ -41,17 +41,17 @@
   font: bold;
 }
 .navi-bar a:hover {
-  color: #12bdfd;
+  color: var(--SpiroDiscoBall);
 }
 .navi-bar a.explore-arrow:after {
   content: "▼";
-  color: red;
+  color: var(--red);
   margin-left: 3px;
   margin-top: 6px;
   font-size: 8px;
 }
 .dropdown-block a:hover {
-  background-color: #12bdfd;
+  background-color: var(--SpiroDiscoBall);
 }
 .explore-dropdown {
   display: flex;
@@ -65,7 +65,7 @@
   padding-bottom: 24px;
   box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.15);
   overflow: hidden;
-  background: #fff;
+  background: var(--white);
   width: 100%;
   height: auto;
   justify-content: space-around;
@@ -73,7 +73,7 @@
   align-items: center;
 }
 .dropdown-block {
-  border-right: solid 2px black;
+  border-right: solid 2px var(--black);
 }
 .navi-bar li:hover {
   display: block;

@@ -13,7 +13,6 @@
   position: absolute;
   right: 27px;
   display: none;
-
   z-index: 2;
 }
 
@@ -30,7 +29,7 @@
 .search-input-container button.expanded {
   width: 200px !important;
   padding: 5px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--Gray80);
 }
 
 .inputSearch.expanded {

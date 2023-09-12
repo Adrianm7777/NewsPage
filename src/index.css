@@ -1,6 +1,10 @@
 :root {
   --black: #000;
   --white: #fff;
+  --whiteSmoke: #f5f5f5;
+  --SpiroDiscoBall: #12bdfd;
+  --Gray80: #ccc;
+  --red: rgb(255, 0, 0);
 }
 body {
   margin: 0;

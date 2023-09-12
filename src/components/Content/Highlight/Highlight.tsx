@@ -5,17 +5,14 @@ const Highlight = () => {
     <div className="news-container">
       <div className="main-news">
         <img src="https://www.freecodecamp.org/news/content/images/2021/08/imgTag.png" />
-        <h2>
-          <a href="#">title</a>
-        </h2>
+        <a href="#">title</a>
         <div className="day-time">
           <p>1 day ago</p>
         </div>
       </div>
       <div className="trending-news">
-        <h2>
-          <a href="#">TRENDING RIGHT NOW</a>
-        </h2>
+        <a href="#">TRENDING RIGHT NOW</a>
+
         <div className="row-list">
           <div className="row-list-item">
             <div className="img-trending">
