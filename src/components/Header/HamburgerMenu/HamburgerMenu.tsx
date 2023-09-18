@@ -15,7 +15,7 @@ const HamburgerMenu = () => {
       {Array(3)
         .fill("")
         .map((_, index) => (
-          <div className="line" key={index}></div>
+          <div className="line" key={index} />
         ))}
       {hamburgerOpen && (
         <div className="hamburger-content" onClick={(e) => e.stopPropagation()}>
