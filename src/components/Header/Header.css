@@ -1,4 +1,4 @@
-.Bar-container {
+.bar-container {
   display: flex;
   flex-direction: row;
   position: fixed;
@@ -9,11 +9,6 @@
   height: 60px;
   border-bottom: solid 2px var(--black);
   z-index: 999;
-}
-.hamburger-menu {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
 }
 .bar {
   width: 100vw;
@@ -28,7 +23,6 @@
   height: 48px;
   padding: 5px;
 }
-
 .navi-bar {
   display: flex;
   align-items: center;
@@ -43,43 +37,9 @@
 .navi-bar a:hover {
   color: var(--spiro-disco-ball);
 }
-.navi-bar a.explore-arrow:after {
-  content: "▼";
-  color: var(--red);
-  margin-left: 3px;
-  margin-top: 6px;
-  font-size: 8px;
-}
-.dropdown-block a:hover {
-  background-color: var(--spiro-disco-ball);
-  color: var(--black);
-}
-.explore-dropdown {
-  display: flex;
-  flex-direction: row;
-  align-content: space-around;
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin-top: 236px;
-  z-index: -1;
-  padding-bottom: 24px;
-  box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.15);
-  overflow: hidden;
-  background: var(--white);
-  width: 100%;
-  height: auto;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  align-items: center;
-}
-.dropdown-block {
-  border-right: solid 2px var(--black);
-}
 .navi-bar li:hover {
   display: block;
 }
-
 .navi-bar-end {
   display: flex;
   align-items: center;
@@ -88,24 +48,20 @@
   margin-right: 3px;
   gap: 40px;
 }
-
 .icon2 {
   height: 30px;
   cursor: pointer;
 }
 
-.line-1 {
-  height: 1px;
-  background-color: var(--black);
-  width: 30px;
-  margin: 5px;
-}
 @media screen and (max-width: 768px) {
-  .hamburger-menu {
-    display: flex;
-    width: 50px;
-  }
   .navi-bar {
     display: none;
+  }
+  .bar-container {
+    width: 100vw;
+  }
+  .navi-bar-end {
+    gap: 9px;
+    width: 50px;
   }
 }

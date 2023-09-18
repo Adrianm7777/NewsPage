@@ -16,7 +16,7 @@ const Highlight = () => (
         {Array(4)
           .fill("")
           .map((_, index) => (
-            <div className="row-list-item">
+            <div className="row-list-item" key={index}>
               <div className="img-trending">
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrJdFxOa8blNPvui5yCD7Ufh8KoaPAUT4T9g&usqp=CAU" />
               </div>
