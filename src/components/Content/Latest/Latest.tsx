@@ -1,7 +1,14 @@
 import { useState } from "react";
 import "./Latest.css";
+import { useGetLatestDataQuery } from "../../../redux/Services/LatestApi/LatestApi";
+import LatestDataItem from "./LatestItem";
 
 const Latest = () => {
+  const { data: latestdata } = useGetLatestDataQuery({
+    country: "kr",
+    category: "entertainment",
+  });
+
   const [offset, setOffset] = useState(0);
 
   const windowWidth = window.innerWidth;
@@ -32,17 +39,13 @@ const Latest = () => {
           width: latestContentWidth,
         }}
       >
-        {Array(12)
-          .fill("")
-          .map((_, index) => (
-            <div className="latest-item" key={index}>
-              <img src="https://images.emojiterra.com/google/noto-emoji/unicode-15/color/share/1f92b.jpg" />
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in
-                finibus urna.
-              </p>
-            </div>
-          ))}
+        {latestdata?.articles.slice(0, 12).map((article) => (
+          <LatestDataItem
+            urlToImage={article.urlToImage || undefined}
+            title={article.title}
+            publishedAt={article.publishedAt}
+          />
+        ))}
       </div>
       <button
         className="offset-button next"
