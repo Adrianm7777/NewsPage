@@ -1,5 +1,5 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-import { url } from "../Endpoints";
+import { LatestNewsUrl } from "../Endpoints";
 
 interface GetLatestDataProps {
   country?: string;
@@ -9,7 +9,7 @@ interface GetLatestDataProps {
 
 export const latestApi = createApi({
   reducerPath: "latestApi",
-  baseQuery: fetchBaseQuery({ baseUrl: url }),
+  baseQuery: fetchBaseQuery({ baseUrl: LatestNewsUrl }),
   endpoints: (builder) => ({
     getLatestData: builder.query<LatestDataResponse, GetLatestDataProps>({
       query: ({ country, category, pageSize }) => {

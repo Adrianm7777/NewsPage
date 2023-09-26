@@ -40,7 +40,7 @@ const Latest = () => {
           width: latestContentWidth,
         }}
       >
-        {latestData?.articles?.map((article?) => (
+        {latestData?.articles?.map((article) => (
           <LatestDataItem
             urlToImage={article?.urlToImage}
             title={article?.title}

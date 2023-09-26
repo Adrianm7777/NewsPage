@@ -1,1 +1,1 @@
-export const url = "https://newsapi.org/v2/";
+export const LatestNewsUrl = "https://newsapi.org/v2/";
