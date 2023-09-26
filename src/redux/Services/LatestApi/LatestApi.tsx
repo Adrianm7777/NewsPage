@@ -1,19 +1,22 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
+import { url } from "../Endpoints";
 
 interface GetLatestDataProps {
   country?: string;
   category?: string;
+  pageSize?: string;
 }
 
 export const latestApi = createApi({
   reducerPath: "latestApi",
-  baseQuery: fetchBaseQuery({ baseUrl: "https://newsapi.org/v2/" }),
+  baseQuery: fetchBaseQuery({ baseUrl: url }),
   endpoints: (builder) => ({
     getLatestData: builder.query<LatestDataResponse, GetLatestDataProps>({
-      query: ({ country, category }) => {
+      query: ({ country, category, pageSize }) => {
         const params = new URLSearchParams({
           ...(country && { country }),
           ...(category && { category }),
+          ...(pageSize && { pageSize }),
         });
 
         return {

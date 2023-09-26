@@ -1,7 +1,5 @@
-import React from "react";
-
 interface LatestDataItemProps {
-  urlToImage?: string;
+  urlToImage?: string | null;
   title?: string;
   publishedAt?: string;
 }
@@ -12,7 +10,7 @@ const LatestDataItem = ({
   publishedAt,
 }: LatestDataItemProps) => (
   <div className="latest-item">
-    <img src={urlToImage || undefined} />
+    <img src={urlToImage || ""} />
     <h2>{title}</h2>
     <p>{publishedAt}</p>
   </div>

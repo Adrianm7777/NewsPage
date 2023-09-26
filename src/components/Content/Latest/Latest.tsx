@@ -4,9 +4,10 @@ import { useGetLatestDataQuery } from "../../../redux/Services/LatestApi/LatestA
 import LatestDataItem from "./LatestItem";
 
 const Latest = () => {
-  const { data: latestdata } = useGetLatestDataQuery({
+  const { data: latestData } = useGetLatestDataQuery({
     country: "kr",
     category: "entertainment",
+    pageSize: "12",
   });
 
   const [offset, setOffset] = useState(0);
@@ -39,11 +40,11 @@ const Latest = () => {
           width: latestContentWidth,
         }}
       >
-        {latestdata?.articles.slice(0, 12).map((article) => (
+        {latestData?.articles?.map((article?) => (
           <LatestDataItem
-            urlToImage={article.urlToImage || undefined}
-            title={article.title}
-            publishedAt={article.publishedAt}
+            urlToImage={article?.urlToImage}
+            title={article?.title}
+            publishedAt={article?.publishedAt}
           />
         ))}
       </div>
