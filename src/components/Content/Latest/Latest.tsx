@@ -4,13 +4,25 @@ import { useGetLatestDataQuery } from "../../../redux/Services/LatestApi/LatestA
 import LatestDataItem from "./LatestItem";
 
 const Latest = () => {
-  const { data: latestData } = useGetLatestDataQuery({
+  const [offset, setOffset] = useState(0);
+
+  const {
+    data: latestData,
+    error,
+    isLoading,
+  } = useGetLatestDataQuery({
     country: "kr",
     category: "entertainment",
     pageSize: "12",
   });
 
-  const [offset, setOffset] = useState(0);
+  if (isLoading) {
+    return <div className="loader"></div>;
+  }
+
+  if (error) {
+    return <div>An error has occurred!</div>;
+  }
 
   const windowWidth = window.innerWidth;
 
