@@ -2,6 +2,8 @@ import { useState } from "react";
 import "./Latest.css";
 import { useGetLatestDataQuery } from "../../../redux/Services/LatestApi/LatestApi";
 import LatestDataItem from "./LatestItem";
+import Loader from "../../Loader/Loader";
+import ErrorApi from "../../ErrorApi/ErrorApi";
 
 const Latest = () => {
   const [offset, setOffset] = useState(0);
@@ -17,11 +19,18 @@ const Latest = () => {
   });
 
   if (isLoading) {
-    return <div className="loader"></div>;
+    return <Loader />;
   }
 
   if (error) {
-    return <div>An error has occurred!</div>;
+    if ("status" in error) {
+      const errMsg =
+        "error" in error ? error.error : JSON.stringify(error.data);
+
+      return <ErrorApi errorMessage={errMsg} />;
+    } else {
+      return <p>{error.message}</p>;
+    }
   }
 
   const windowWidth = window.innerWidth;

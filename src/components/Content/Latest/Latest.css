@@ -57,27 +57,16 @@
 .offset-button.next {
   right: 10px;
 }
-
-.loader {
-  border: 16px solid var(--light-grey);
-  border-top: 16px solid var(--spiro-disco-ball);
-  border-radius: 50%;
-  width: 120px;
-  height: 120px;
-  animation: spin 2s linear infinite;
-  left: 50%;
-  position: relative;
+.error-container {
+  display: flex;
+  justify-content: center;
+  background-color: var(--error-light-red);
+  border: 1px solid;
+  color: var(--error-red);
 }
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+.error-api {
+  padding: 15px;
 }
-
 @media screen and (max-width: 768px) {
   .offset-button {
     display: none;

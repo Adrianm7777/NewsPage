@@ -6,6 +6,8 @@
   --gray-80: #ccc;
   --red: rgb(255, 0, 0);
   --light-grey: #f3f3f3;
+  --error-red: #d8000c;
+  --error-light-red: #ffbaba;
 }
 body {
   margin: 0;
