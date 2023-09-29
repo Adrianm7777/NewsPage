@@ -1,0 +1,10 @@
+.error-container {
+  display: flex;
+  justify-content: center;
+  background-color: var(--error-light-red);
+  border: 1px solid;
+  color: var(--error-red);
+}
+.error-api {
+  padding: 15px;
+}

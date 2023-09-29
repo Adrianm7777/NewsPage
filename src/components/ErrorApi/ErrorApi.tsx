@@ -1,3 +1,5 @@
+import "./ErrorApi.css";
+
 interface ErrorApiProps {
   errorMessage: string;
 }
