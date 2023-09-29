@@ -4,6 +4,7 @@ import { useGetLatestDataQuery } from "../../../redux/Services/LatestApi/LatestA
 import LatestDataItem from "./LatestItem";
 import Loader from "../../Loader/Loader";
 import ErrorApi from "../../ErrorApi/ErrorApi";
+import "../../ErrorApi/ErrorApi.css";
 
 const Latest = () => {
   const [offset, setOffset] = useState(0);
