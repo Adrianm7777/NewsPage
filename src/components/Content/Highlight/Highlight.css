@@ -9,52 +9,69 @@
 .main-news {
   display: flex;
   height: 100%;
-  width: 55%;
+  width: 50%;
   margin-top: 10px;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-around;
   align-items: flex-start;
 }
 
-.main-news img {
+.main-news-img {
   display: flex;
   max-height: 538px;
   width: 100%;
 }
-.main-news a:hover {
+.main-news-img a img {
+  display: flex;
+  max-height: 538px;
+  width: 100%;
+  cursor: pointer;
+}
+.main-news-title {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+.main-news-title a:hover {
   color: var(--spiro-disco-ball);
+  cursor: pointer;
 }
 
 .trending-news {
   display: flex;
   margin-top: 10px;
   height: 100%;
-  width: 20%;
+  width: 30%;
   flex-direction: column;
   align-items: flex-start;
 }
-
+.trending-header {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
 .row-list {
   display: flex;
   height: auto;
   width: 100%;
   flex-direction: column;
   flex-wrap: nowrap;
-  justify-content: space-between;
+  gap: 1rem;
 }
 .row-list-item {
   display: flex;
+  flex-direction: row;
   width: 100%;
   height: auto;
-  gap: 10px;
+  gap: 1rem;
 }
 
-.row-list-item img {
-  width: 100%;
-  height: auto;
+.row-list-item a img {
+  width: 150px;
+  height: 150px;
 }
 .trending-news a:hover {
   color: var(--spiro-disco-ball);
+  cursor: pointer;
 }
 
 .title-trending {
@@ -64,6 +81,12 @@
   flex-wrap: wrap;
   align-content: space-between;
   width: 100%;
+}
+
+.img-trending {
+  display: flex;
+  width: 150px;
+  height: 150px;
 }
 
 @media screen and (max-width: 768px) {

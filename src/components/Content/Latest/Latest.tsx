@@ -61,11 +61,12 @@ const Latest = () => {
           width: latestContentWidth,
         }}
       >
-        {latestData?.articles?.map((article) => (
+        {latestData?.articles?.map((article, index) => (
           <LatestDataItem
             urlToImage={article?.urlToImage}
             title={article?.title}
             publishedAt={article?.publishedAt}
+            key={index}
           />
         ))}
       </div>

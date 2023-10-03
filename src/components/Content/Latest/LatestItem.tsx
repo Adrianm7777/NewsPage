@@ -10,8 +10,10 @@ const LatestDataItem = ({
   publishedAt,
 }: LatestDataItemProps) => (
   <div className="latest-item">
-    <img src={urlToImage || ""} />
-    <h2>{title}</h2>
+    <a>
+      <img src={urlToImage || ""} />
+    </a>
+    <a>{title}</a>
     <p>{publishedAt}</p>
   </div>
 );
