@@ -38,10 +38,11 @@ const Highlight = () => {
   return (
     <div className="news-container">
       <MainNews
-        urlToImage={mainData?.articles[0]?.urlToImage}
-        title={mainData?.articles[0]?.title}
-        publishedAt={mainData?.articles[0]?.publishedAt}
-        key={mainData?.articles[0]?.source?.id}
+        urlToImage={mainData?.articles?.[0]?.urlToImage}
+        title={mainData?.articles?.[0]?.title}
+        publishedAt={mainData?.articles?.[0]?.publishedAt}
+        url={mainData?.articles?.[0]?.url}
+        key={mainData?.articles?.[0]?.publishedAt}
       />
 
       <div className="trending-news">
@@ -49,13 +50,17 @@ const Highlight = () => {
           <a href="#">TRENDING RIGHT NOW</a>
         </div>
         <div className="row-list">
-          {trendingData?.articles?.map((article) => (
-            <TrendingNews
-              urlToImage={article?.urlToImage}
-              title={article?.title}
-              key={article?.publishedAt}
-            />
-          ))}
+          {trendingData?.articles?.map(
+            ({ urlToImage, title, publishedAt, url }) => (
+              <TrendingNews
+                urlToImage={urlToImage}
+                title={title}
+                url={url}
+                publishedAt={publishedAt}
+                key={publishedAt}
+              />
+            )
+          )}
         </div>
       </div>
     </div>
