@@ -24,9 +24,14 @@
   object-fit: fill;
 }
 
-.latest-item h2 {
+.latest-item a {
   font-size: 1.3rem;
   margin-left: 4px;
+}
+
+.latest-item a:hover {
+  color: var(--spiro-disco-ball);
+  cursor: pointer;
 }
 .latest-item p {
   margin-left: 4px;

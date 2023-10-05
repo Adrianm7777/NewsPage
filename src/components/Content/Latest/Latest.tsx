@@ -61,13 +61,17 @@ const Latest = () => {
           width: latestContentWidth,
         }}
       >
-        {latestData?.articles?.map((article) => (
-          <LatestDataItem
-            urlToImage={article?.urlToImage}
-            title={article?.title}
-            publishedAt={article?.publishedAt}
-          />
-        ))}
+        {latestData?.articles?.map(
+          ({ urlToImage, title, publishedAt, url }) => (
+            <LatestDataItem
+              urlToImage={urlToImage}
+              title={title}
+              publishedAt={publishedAt}
+              url={url}
+              key={publishedAt}
+            />
+          )
+        )}
       </div>
       <button
         className="offset-button next"

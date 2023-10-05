@@ -2,16 +2,20 @@ interface LatestDataItemProps {
   urlToImage?: string | null;
   title?: string;
   publishedAt?: string;
+  url?: string;
 }
 
 const LatestDataItem = ({
   urlToImage,
   title,
   publishedAt,
+  url,
 }: LatestDataItemProps) => (
   <div className="latest-item">
-    <img src={urlToImage || ""} />
-    <h2>{title}</h2>
+    <a href={url}>
+      <img src={urlToImage || ""} />
+    </a>
+    <a href={url}>{title}</a>
     <p>{publishedAt}</p>
   </div>
 );
