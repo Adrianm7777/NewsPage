@@ -6,7 +6,7 @@ interface MainNewsProps {
 }
 
 const MainNews = ({ urlToImage, title, publishedAt, url }: MainNewsProps) => (
-  <div className="main-news" key={publishedAt}>
+  <div className="main-news">
     <div className="main-news-img">
       <a href={url} target="_blank">
         <img src={urlToImage || ""} />

@@ -11,7 +11,7 @@ const TrendingNews = ({
   publishedAt,
   url,
 }: TrendingNewsProps) => (
-  <div className="row-list-item" key={publishedAt}>
+  <div className="row-list-item">
     <div className="img-trending">
       <a href={url} target="_blank">
         <img src={urlToImage || ""} />

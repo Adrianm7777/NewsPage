@@ -42,7 +42,6 @@ const Highlight = () => {
         title={mainData?.articles?.[0]?.title}
         publishedAt={mainData?.articles?.[0]?.publishedAt}
         url={mainData?.articles?.[0]?.url}
-        key={mainData?.articles?.[0]?.publishedAt}
       />
 
       <div className="trending-news">

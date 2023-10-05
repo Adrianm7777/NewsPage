@@ -11,7 +11,7 @@ const LatestDataItem = ({
   publishedAt,
   url,
 }: LatestDataItemProps) => (
-  <div className="latest-item" key={publishedAt}>
+  <div className="latest-item">
     <a href={url}>
       <img src={urlToImage || ""} />
     </a>
