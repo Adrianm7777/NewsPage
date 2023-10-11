@@ -13,7 +13,7 @@ const Header = () => {
       <div className="navi-bar-start">
         <LinkImg
           className="logo1"
-          href="#"
+          href="/"
           src="https://cdn-icons-png.flaticon.com/512/4498/4498544.png"
         />
       </div>

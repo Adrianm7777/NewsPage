@@ -1,9 +1,10 @@
-import { useGetLatestDataQuery } from "../../../redux/Services/LatestApi/LatestApi";
+import { useGetLatestDataQuery } from "../../../../../redux/Services/LatestApi/LatestApi";
 import "./Highlight.css";
 import MainNews from "./MainNews";
 import Loader from "../../Loader/Loader";
 import ErrorApi from "../../ErrorApi/ErrorApi";
 import TrendingNews from "./TrendingNews";
+import { Link } from "react-router-dom";
 
 const Highlight = () => {
   const {
@@ -46,7 +47,7 @@ const Highlight = () => {
 
       <div className="trending-news">
         <div className="trending-header">
-          <a href="#">TRENDING RIGHT NOW</a>
+          <Link to="/Trending">TRENDING RIGHT NOW</Link>
         </div>
         <div className="row-list">
           {trendingData?.articles?.map(

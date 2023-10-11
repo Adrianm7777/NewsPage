@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./Latest.css";
-import { useGetLatestDataQuery } from "../../../redux/Services/LatestApi/LatestApi";
+import { useGetLatestDataQuery } from "../../../../../redux/Services/LatestApi/LatestApi";
 import LatestDataItem from "./LatestItem";
 import Loader from "../../Loader/Loader";
 import ErrorApi from "../../ErrorApi/ErrorApi";
