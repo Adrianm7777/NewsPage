@@ -1,7 +1,5 @@
 import Content from "./components/Content/Content";
 
-const HomePage = () => {
-  return <Content />;
-};
+const HomePage = () => <Content />;
 
 export default HomePage;

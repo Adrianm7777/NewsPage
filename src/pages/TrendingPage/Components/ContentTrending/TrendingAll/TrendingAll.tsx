@@ -8,9 +8,7 @@ import ErrorApi from "../../../../HomePage/components/ErrorApi/ErrorApi";
 const TrendingAll = () => {
   const [displayCount, setDisplayCount] = useState(12);
 
-  const handleShowMore = () => {
-    setDisplayCount((prevCount) => prevCount + 12);
-  };
+  const handleShowMore = () => setDisplayCount((prevCount) => prevCount + 12);
 
   const {
     data: trendingAllData,
@@ -21,6 +19,7 @@ const TrendingAll = () => {
     category: "entertainment",
     pageSize: displayCount.toString(),
   });
+
   if (isLoading) {
     return <Loader />;
   }
