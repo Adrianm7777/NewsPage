@@ -1,4 +1,3 @@
-import React from "react";
 import "./Charts.css";
 import Chart from "../Chart/Chart";
 

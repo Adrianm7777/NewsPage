@@ -1,30 +1,31 @@
-interface TrendingAllTableProps {
+interface AllItemTableProps {
   urlToImage?: string | null;
   url?: string;
   title?: string;
   publishedAt?: string;
 }
 
-const TrendingAllTable = ({
+const AllItemTable = ({
+  urlToImage,
+  url,
   publishedAt,
   title,
-  url,
-  urlToImage,
-}: TrendingAllTableProps) => (
-  <div className="trending-all-item">
-    <div className="img-trending-all">
+}: AllItemTableProps) => (
+  <div className="all-item">
+    <div className="img-all">
       <a href={url} target="_blank">
         <img src={urlToImage || ""} />
       </a>
     </div>
-    <div className="title-trending-all">
+    <div className="title-all">
       <a href={url} target="_blank">
-        {title}
+        <p>{title}</p>
       </a>
     </div>
-    <div className="date-trending-all">
+    <div className="data-all">
       <p>{publishedAt}</p>
     </div>
   </div>
 );
-export default TrendingAllTable;
+
+export default AllItemTable;

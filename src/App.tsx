@@ -2,7 +2,8 @@ import "./App.css";
 import { Route, Routes } from "react-router-dom";
 import HomePage from "./pages/HomePage/HomePage";
 import TrendingPage from "./pages/TrendingPage/TrendingPage";
-import PageLayout from "./pages/PageLayout";
+import PageLayout from "./reusable/PageLayout";
+import LatestPage from "./pages/LatestPage/LatestPage";
 
 function App() {
   return (
@@ -13,6 +14,9 @@ function App() {
         </Route>
         <Route path="/Trending" element={<PageLayout />}>
           <Route index element={<TrendingPage />} />
+        </Route>
+        <Route path="/Latest" element={<PageLayout />}>
+          <Route index element={<LatestPage />} />
         </Route>
       </Routes>
     </div>

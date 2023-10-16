@@ -8,7 +8,12 @@
   --light-grey: #f3f3f3;
   --error-red: #d8000c;
   --error-light-red: #ffbaba;
+  --background-color-light: #ffffff;
+  --text-color-light: #000000;
+  --background-color-dark: #1a1a1a;
+  --text-color-dark: #ffffff;
 }
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -19,6 +24,12 @@ body {
   height: 100%;
   width: 100vw;
   overflow-x: hidden;
+  background-color: var(--background-color-light);
+  color: var(--text-color-light);
+}
+.dark-mode {
+  background-color: var(--background-color-dark);
+  color: var(--text-color-dark);
 }
 
 code {
@@ -28,7 +39,7 @@ code {
 
 a {
   text-decoration: none;
-  color: var(--black);
+  color: var(--text-color);
 }
 
 button {

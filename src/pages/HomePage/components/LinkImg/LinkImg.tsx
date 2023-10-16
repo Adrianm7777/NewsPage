@@ -1,12 +1,13 @@
 interface LinkImgProps {
-  href: string;
+  href?: string;
   className: string;
   src: string;
   alt?: string;
+  onClick?: () => void;
 }
-const LinkImg = ({ className, href, src, alt = "" }: LinkImgProps) => (
+const LinkImg = ({ className, href, src, alt = "", onClick }: LinkImgProps) => (
   <a href={href}>
-    <img className={className} alt={alt} src={src} />
+    <img className={className} onClick={onClick} alt={alt} src={src} />
   </a>
 );
 

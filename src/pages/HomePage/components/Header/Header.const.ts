@@ -3,12 +3,12 @@ export const HEADER_DATA = {
     {
       id: 1,
       name: "Latest",
-      href: "#",
+      href: "/Latest",
     },
     {
       id: 2,
-      name: "Tranding",
-      href: "#",
+      name: "Trending",
+      href: "/Trending",
     },
     {
       id: 3,

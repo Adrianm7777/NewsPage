@@ -1,22 +1,22 @@
 import { useState } from "react";
-import { useGetLatestDataQuery } from "../../../../../redux/Services/TopHeadlinesApi/TopHeadlinesApi";
-import "./TrendingAll.css";
-import Loader from "../../../../../reusable/Loader/Loader";
-import ErrorApi from "../../../../../reusable/ErrorApi/ErrorApi";
-import AllItemTable from "../../../../../reusable/AllItemTable";
+import { useGetEverythingDataQuery } from "../../../../redux/Services/EverythingApi/EverythingApi";
+import AllItemTable from "../../../../reusable/AllItemTable";
+import "./LatestAll.css";
+import Loader from "../../../../reusable/Loader/Loader";
+import ErrorApi from "../../../../reusable/ErrorApi/ErrorApi";
 
-const TrendingAll = () => {
+const LatestPageAll = () => {
   const [displayCount, setDisplayCount] = useState(12);
 
   const handleShowMore = () => setDisplayCount((prevCount) => prevCount + 12);
 
   const {
-    data: trendingAllData,
+    data: everythingApi,
     isLoading,
     error,
-  } = useGetLatestDataQuery({
-    country: "kr",
-    category: "entertainment",
+  } = useGetEverythingDataQuery({
+    q: "kpop",
+    language: "en",
     pageSize: displayCount.toString(),
   });
 
@@ -35,13 +35,13 @@ const TrendingAll = () => {
   }
 
   return (
-    <div className="trending-all-container">
-      <div className="trending-all-header">
-        <h2>ALL TRENDING POST</h2>
+    <div className="latest-all-container">
+      <div className="latest-all-header">
+        <h2>ALL LATEST POST</h2>
       </div>
-      <div className="trending-all-item-container">
-        {trendingAllData?.articles?.map(
-          ({ url, title, publishedAt, urlToImage }) => (
+      <div className="latest-all-item-container">
+        {everythingApi?.articles?.map(
+          ({ url, urlToImage, title, publishedAt }) => (
             <AllItemTable
               url={url}
               title={title}
@@ -52,12 +52,11 @@ const TrendingAll = () => {
           )
         )}
       </div>
-
-      <button className="trending-all-btn" onClick={handleShowMore}>
+      <button className="latest-all-btn" onClick={handleShowMore}>
         Show more
       </button>
     </div>
   );
 };
 
-export default TrendingAll;
+export default LatestPageAll;
