@@ -25,6 +25,8 @@
   flex-direction: column;
   justify-content: space-between;
   width: 25%;
+  border: 3px solid var(--black);
+  border-radius: 2%;
 }
 .latest-item img {
   width: 100%;

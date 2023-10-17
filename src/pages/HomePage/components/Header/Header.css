@@ -8,7 +8,7 @@
   background: var(--background-color-light);
   color: var(--text-color-light);
   height: 60px;
-  border-bottom: solid 2px var(--black);
+  border-bottom: solid 6px var(--black);
   z-index: 999;
 }
 .bar {

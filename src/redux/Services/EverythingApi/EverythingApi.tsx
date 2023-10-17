@@ -1,5 +1,5 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-import { Everything } from "../Endpoints";
+import { everything } from "../Endpoints";
 
 interface GetEverythingDataProps {
   q?: string;
@@ -12,7 +12,7 @@ interface GetEverythingDataProps {
 
 export const everythingApi = createApi({
   reducerPath: "everythingApi",
-  baseQuery: fetchBaseQuery({ baseUrl: Everything }),
+  baseQuery: fetchBaseQuery({ baseUrl: everything }),
   endpoints: (builder) => ({
     getEverythingData: builder.query<
       LatestDataResponse,

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "./SignUp.css";
+import LinkImg from "../LinkImg/LinkImg";
 
 const SignUp = () => {
   const [isLoginVisible, setIsLoginVisible] = useState(false);
@@ -16,13 +17,12 @@ const SignUp = () => {
 
   return (
     <div onClick={(e) => e.stopPropagation()}>
-      <button onClick={toggleLogin}>
-        <img
-          className="icon2"
-          alt=""
-          src="https://0.soompi.io/soompi-web/profile.4efeec85367895e536de20b147998d75.svg"
-        />
-      </button>
+      <LinkImg
+        onClick={toggleLogin}
+        className={"icon2"}
+        alt=""
+        src="https://0.soompi.io/soompi-web/profile.4efeec85367895e536de20b147998d75.svg"
+      />
 
       {isLoginVisible && (
         <form className="login-form">

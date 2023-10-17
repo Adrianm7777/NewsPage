@@ -18,11 +18,9 @@ const Header = () => {
     <div className="bar-container">
       <HamburgerMenu />
       <div className="navi-bar-start">
-        <LinkImg
-          className="logo1"
-          href="/"
-          src="https://cdn-icons-png.flaticon.com/512/4498/4498544.png"
-        />
+        <a className="logo1" href="/">
+          <img src="https://cdn-icons-png.flaticon.com/512/4498/4498544.png" />
+        </a>
       </div>
 
       <div className="navi-bar" onClick={(e) => e.stopPropagation()}>

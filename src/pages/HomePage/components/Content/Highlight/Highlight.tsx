@@ -12,7 +12,7 @@ const Highlight = () => {
     isLoading,
     error,
   } = useGetLatestDataQuery({
-    country: "jp",
+    country: "kr",
     category: "entertainment",
     pageSize: "1",
   });

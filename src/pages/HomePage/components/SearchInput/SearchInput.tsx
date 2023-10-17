@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "./SearchInput.css";
+import LinkImg from "../LinkImg/LinkImg";
 
 const SearchInput = () => {
   const [isSearchVisible, setIsSearchVisible] = useState(false);

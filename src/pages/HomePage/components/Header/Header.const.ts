@@ -13,7 +13,7 @@ export const HEADER_DATA = {
     {
       id: 3,
       name: "Popular",
-      href: "#",
+      href: "/Popular",
     },
     {
       id: 4,
