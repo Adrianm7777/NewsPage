@@ -56,6 +56,7 @@
   flex-direction: column;
   flex-wrap: nowrap;
   gap: 1rem;
+  border: var(--gray-80) solid 2px;
 }
 .row-list-item {
   display: flex;
@@ -66,7 +67,7 @@
 }
 
 .row-list-item a img {
-  width: 150px;
+  width: 219px;
   height: 150px;
 }
 .trending-news a:hover {
@@ -85,7 +86,7 @@
 
 .img-trending {
   display: flex;
-  width: 150px;
+  width: 219px;
   height: 150px;
 }
 

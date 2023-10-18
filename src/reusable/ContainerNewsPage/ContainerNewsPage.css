@@ -1,4 +1,4 @@
-.trending-all-container {
+.all-container {
   height: auto;
   width: 100vw;
   margin-top: 60px;
@@ -9,10 +9,10 @@
   margin-left: 3rem;
 }
 
-.trending-all-container a:hover {
+.all-container a:hover {
   color: var(--spiro-disco-ball);
 }
-.trending-all-header {
+.all-header {
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -20,36 +20,36 @@
   margin-bottom: 1rem;
 }
 
-.trending-all-item-container {
+.all-item-container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
 
-.trending-all-item {
+.all-item {
   display: flex;
   flex-direction: column;
   width: 33.3333%;
   height: 450px;
   justify-content: space-between;
 }
-.img-trending-all {
+.img-all {
   width: 100%;
   max-width: inherit;
   height: 212px;
 }
-.img-trending-all img {
+.img-all img {
   display: flex;
   height: 211px;
   width: 400px;
   object-fit: cover;
 }
 
-.title-trending-all {
+.title-all {
   width: 400px;
 }
 
-.trending-all-btn {
+.all-btn {
   display: flex;
   justify-content: center;
   height: 40px;
@@ -59,6 +59,31 @@
   border: solid 3px var(--spiro-disco-ball);
 }
 
-.trending-all-btn:hover {
+.all-btn:hover {
   background-color: var(--spiro-disco-ball);
+}
+
+@media screen and (max-width: 768px) {
+  .all-container {
+    width: 100vw;
+    margin-left: 0.1rem;
+  }
+  .all-item-container {
+    flex-direction: column;
+    width: inherit;
+  }
+  .all-item {
+    width: 300px;
+  }
+  .img-all img {
+    width: 390px;
+  }
+  .title-all {
+    width: 100vw;
+  }
+  .all-header,
+  .all-header h2 {
+    font-size: 2rem;
+    justify-content: center;
+  }
 }

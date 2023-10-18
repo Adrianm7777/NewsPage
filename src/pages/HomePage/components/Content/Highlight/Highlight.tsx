@@ -1,8 +1,8 @@
-import { useGetLatestDataQuery } from "../../../../../redux/Services/LatestApi/LatestApi";
+import { useGetLatestDataQuery } from "../../../../../redux/Services/TopHeadlinesApi/TopHeadlinesApi";
 import "./Highlight.css";
 import MainNews from "./MainNews";
-import Loader from "../../Loader/Loader";
-import ErrorApi from "../../ErrorApi/ErrorApi";
+import Loader from "../../../../../reusable/Loader/Loader";
+import ErrorApi from "../../../../../reusable/ErrorApi/ErrorApi";
 import TrendingNews from "./TrendingNews";
 import { Link } from "react-router-dom";
 
@@ -12,15 +12,17 @@ const Highlight = () => {
     isLoading,
     error,
   } = useGetLatestDataQuery({
-    country: "jp",
+    country: "kr",
     category: "entertainment",
     pageSize: "1",
   });
+
   const { data: trendingData } = useGetLatestDataQuery({
     country: "kr",
     category: "entertainment",
     pageSize: "4",
   });
+
   if (isLoading) {
     return <Loader />;
   }

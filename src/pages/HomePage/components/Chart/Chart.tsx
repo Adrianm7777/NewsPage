@@ -19,7 +19,7 @@ const Chart = ({
 }: ChartProps) => (
   <div className={classType}>
     <div className="ranking-number">{ranking}</div>
-    <a href={href} target="_blank">
+    <a href={href} target="_blank" rel="noopener">
       <img src={src} />
     </a>
     <div className="chart-item-text">

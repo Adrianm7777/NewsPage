@@ -1,21 +1,23 @@
 import { useState } from "react";
 import "./Latest.css";
-import { useGetLatestDataQuery } from "../../../../../redux/Services/LatestApi/LatestApi";
+import { useGetEverythingDataQuery } from "../../../../../redux/Services/EverythingApi/EverythingApi";
 import LatestDataItem from "./LatestItem";
-import Loader from "../../Loader/Loader";
-import ErrorApi from "../../ErrorApi/ErrorApi";
+import Loader from "../../../../../reusable/Loader/Loader";
+import ErrorApi from "../../../../../reusable/ErrorApi/ErrorApi";
+import { Link } from "react-router-dom";
 
 const Latest = () => {
   const [offset, setOffset] = useState(0);
 
   const {
-    data: latestData,
+    data: everythingApi,
     error,
     isLoading,
-  } = useGetLatestDataQuery({
-    country: "kr",
-    category: "entertainment",
+  } = useGetEverythingDataQuery({
+    language: "en",
+    sortBy: "publishedAt",
     pageSize: "12",
+    q: "kpop",
   });
 
   if (isLoading) {
@@ -46,7 +48,10 @@ const Latest = () => {
 
   return (
     <div className="latest-container">
-      <a href="#">LATEST NEWS</a>
+      <div className="latest-header">
+        <Link to="/Latest">LATEST NEWS</Link>
+      </div>
+
       <button
         className="offset-button prev"
         onClick={handlePrevPage}
@@ -61,7 +66,7 @@ const Latest = () => {
           width: latestContentWidth,
         }}
       >
-        {latestData?.articles?.map(
+        {everythingApi?.articles?.map(
           ({ urlToImage, title, publishedAt, url }) => (
             <LatestDataItem
               urlToImage={urlToImage}
