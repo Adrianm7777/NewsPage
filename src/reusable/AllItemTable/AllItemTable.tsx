@@ -13,12 +13,12 @@ const AllItemTable = ({
 }: AllItemTableProps) => (
   <div className="all-item">
     <div className="img-all">
-      <a href={url} target="_blank">
+      <a href={url} target="_blank" rel="noopener">
         <img src={urlToImage || ""} />
       </a>
     </div>
     <div className="title-all">
-      <a href={url} target="_blank">
+      <a href={url} target="_blank" rel="noopener">
         <p>{title}</p>
       </a>
     </div>
