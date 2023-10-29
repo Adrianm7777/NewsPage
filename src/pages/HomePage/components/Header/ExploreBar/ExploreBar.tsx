@@ -17,7 +17,7 @@ const ExploreBar = () => {
 
   return (
     <div>
-      <a className="explore-arrow" href="#" onClick={toggleExplorer}>
+      <a className="explore-arrow" onClick={toggleExplorer}>
         EXPLORE
       </a>
       {isExploreOpen && (

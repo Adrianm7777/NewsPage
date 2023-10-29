@@ -1,0 +1,9 @@
+.form-alert-text {
+  width: 100%;
+  color: var(--red);
+}
+
+.form-alert-text p {
+  margin: 0px;
+  font-size: 0.8rem;
+}

@@ -5,6 +5,7 @@ import TrendingPage from "./pages/TrendingPage/Components/ContentTrending/Trendi
 import PageLayout from "./reusable/PageLayout/PageLayout";
 import LatestPage from "./pages/LatestPage/Components/LatestAll/LatestPage";
 import PopularPage from "./pages/PopularPage/Components/PopularPage";
+import RegistrationPage from "./pages/RegistrationPage/RegistrationPage";
 
 function App() {
   return (
@@ -21,6 +22,9 @@ function App() {
         </Route>
         <Route path="/Popular" element={<PageLayout />}>
           <Route index element={<PopularPage />} />
+        </Route>
+        <Route path="/registration" element={<PageLayout />}>
+          <Route index element={<RegistrationPage />}></Route>
         </Route>
       </Routes>
     </div>

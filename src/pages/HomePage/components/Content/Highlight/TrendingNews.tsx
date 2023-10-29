@@ -13,12 +13,12 @@ const TrendingNews = ({
 }: TrendingNewsProps) => (
   <div className="row-list-item">
     <div className="img-trending">
-      <a href={url} target="_blank" rel="noopener">
+      <a href={url} target="_blank" rel="noopener noreferrer">
         <img src={urlToImage || ""} />
       </a>
     </div>
     <div className="title-trending">
-      <a href={url} target="_blank" rel="noopener">
+      <a href={url} target="_blank" rel="noopener noreferrer">
         {title}
       </a>
     </div>

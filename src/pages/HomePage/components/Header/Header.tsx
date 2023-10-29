@@ -1,6 +1,6 @@
 import "./Header.css";
 import SearchInput from "../SearchInput/SearchInput";
-import SignUp from "../SignUp/SignUp";
+import LogIn from "../LogIn/LogIn";
 import LinkImg from "../LinkImg/LinkImg";
 import { HEADER_DATA } from "./Header.const";
 import HamburgerMenu from "./HamburgerMenu/HamburgerMenu";
@@ -38,7 +38,7 @@ const Header = () => {
           onClick={toggleDarkMode}
           src="https://cdn-icons-png.flaticon.com/512/6714/6714978.png"
         />
-        <SignUp />
+        <LogIn />
       </div>
     </div>
   );

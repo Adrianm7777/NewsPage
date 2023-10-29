@@ -2,7 +2,7 @@ interface LinkImgProps {
   className: string;
   src: string;
   alt?: string;
-  onClick?: () => void;
+  onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }
 const LinkImg = ({ className, src, alt = "", onClick }: LinkImgProps) => (
   <button onClick={onClick}>
