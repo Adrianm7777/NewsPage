@@ -69,7 +69,7 @@ const RegistrationForm = ({
             {...register("username", { required: "username is required" })}
           />
           {errors.username && (
-            <FormAlert errorText={`${errors.username.message?.toString()}`} />
+            <FormAlert errorText={errors.username.message?.toString()} />
           )}
           <div className="signup-input-password">
             <input
@@ -91,9 +91,7 @@ const RegistrationForm = ({
             </button>
           </div>
           {errors.createPassword && (
-            <FormAlert
-              errorText={`${errors.createPassword.message?.toString()}`}
-            />
+            <FormAlert errorText={errors.createPassword.message?.toString()} />
           )}
           <div className="signup-input-password">
             <input
@@ -114,9 +112,7 @@ const RegistrationForm = ({
             </button>
           </div>
           {errors.confirmPassword && (
-            <FormAlert
-              errorText={`${errors.confirmPassword.message?.toString()}`}
-            />
+            <FormAlert errorText={errors.confirmPassword.message?.toString()} />
           )}
         </div>
         <div className="signup-button">
