@@ -2,13 +2,13 @@ import { FieldErrors } from "react-hook-form";
 import "./FormAlert.css";
 
 interface FormAlertProps {
-  errorText?: string | FieldErrors;
+  errorText?: string;
 }
 
 const FormAlert = ({ errorText }: FormAlertProps) => {
   return (
     <div className="form-alert-text">
-      <p>{`${errorText}`}</p>
+      <p>{errorText}</p>
     </div>
   );
 };

@@ -60,14 +60,16 @@ const RegistrationForm = ({
             placeholder="Email"
             {...register("email", { required: "Email is required" })}
           />
-          {errors.email && <FormAlert errorText={`${errors.email.message}`} />}
+          {errors.email && (
+            <FormAlert errorText={errors.email.message?.toString()} />
+          )}
           <input
             type="text"
             placeholder="Username"
             {...register("username", { required: "username is required" })}
           />
           {errors.username && (
-            <FormAlert errorText={`${errors.username.message}`} />
+            <FormAlert errorText={`${errors.username.message?.toString()}`} />
           )}
           <div className="signup-input-password">
             <input
@@ -89,7 +91,9 @@ const RegistrationForm = ({
             </button>
           </div>
           {errors.createPassword && (
-            <FormAlert errorText={`${errors.createPassword.message}`} />
+            <FormAlert
+              errorText={`${errors.createPassword.message?.toString()}`}
+            />
           )}
           <div className="signup-input-password">
             <input
@@ -110,7 +114,9 @@ const RegistrationForm = ({
             </button>
           </div>
           {errors.confirmPassword && (
-            <FormAlert errorText={`${errors.confirmPassword.message}`} />
+            <FormAlert
+              errorText={`${errors.confirmPassword.message?.toString()}`}
+            />
           )}
         </div>
         <div className="signup-button">

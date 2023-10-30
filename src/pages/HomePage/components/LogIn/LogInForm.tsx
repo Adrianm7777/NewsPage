@@ -22,15 +22,15 @@ const LogInForm = ({
       <div className="login-form">
         <div className="login-title">
           {label}
-          <div className="line"></div>
+          <div className="line" />
         </div>
         <div className="login-form-input">
           <div className="single-input">
-            <img src={userImage}></img>
+            <img src={userImage} />
             <input type="text" placeholder="Username" />
           </div>
           <div className="single-input">
-            <img src={passwordImage}></img>
+            <img src={passwordImage} />
             <input type="password" placeholder="password" />
           </div>
           <div className="login-text">
