@@ -1,3 +1,7 @@
+.explore-arrow {
+  cursor: pointer;
+}
+
 .navi-bar a.explore-arrow:after {
   content: "▼";
   color: var(--red);
