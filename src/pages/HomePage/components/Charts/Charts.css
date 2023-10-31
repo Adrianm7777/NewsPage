@@ -4,7 +4,7 @@
   height: 150vh;
   flex-direction: row;
   justify-content: space-between;
-  align-content: stretch;
+  margin-bottom: 12px;
 }
 
 .place-row {

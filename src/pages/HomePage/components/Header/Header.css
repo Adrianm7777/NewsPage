@@ -5,10 +5,9 @@
   justify-content: space-between;
   width: 100%;
   top: 0;
-  background: var(--background-color-light);
+  background: var(--white);
   color: var(--text-color-light);
   height: 60px;
-  border-bottom: solid 6px var(--black);
   z-index: 999;
 }
 .bar {
@@ -27,13 +26,14 @@
 .navi-bar {
   display: flex;
   align-items: center;
+  gap: 35px;
 }
 .navi-bar a {
   display: flex;
   justify-content: center;
   margin: 5px;
   padding: 5px;
-  font: bold;
+  font-weight: bold;
 }
 .navi-bar a:hover {
   color: var(--spiro-disco-ball);
@@ -49,11 +49,16 @@
   margin-right: 3px;
   gap: 40px;
 }
+
 .icon2 {
   height: 30px;
   cursor: pointer;
+  transition: transform 0.2s ease-in-out;
 }
 
+.icon2:hover {
+  transform: scale(1.3);
+}
 @media screen and (max-width: 768px) {
   .navi-bar {
     display: none;
